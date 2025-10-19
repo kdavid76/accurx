@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':library')
+    implementation "com.google.guava:guava:${guava_version}"
+    implementation "org.slf4j:slf4j-api:${slf4j_version}"
+    implementation "org.slf4j:slf4j-simple:${slf4j_version}"
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'com.accurx.reliabledownloader.runner.Program'
+}
