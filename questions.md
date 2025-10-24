@@ -50,7 +50,7 @@ And of course, I coverd the main use cases and the edge cases with unit tests.
 ## 3. How long did you spend on the exercise?
 
 I spent about 4-6 hours with studying the problem and the domain. And about 16–18 hours with writing the code. This
-includes the time for writing the Spring boot application used for testing the happi path. I've completed the exercise
+includes the time for writing the Spring boot application used for testing the happy path. I completed the exercise
 in five sittings.
 
 ## 4. What would you add if you had more time and how?
