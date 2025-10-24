@@ -10,18 +10,19 @@ import java.nio.file.Path;
 public class Program {
 
     private static final FileDownloadSettings downloadSettings = new FileDownloadSettings(
-            // Replace the URL below with https://web.dev.accurx.com/api/desktop/download/unreliable?delay=<milliseconds> to test against the unreliable server. You can adjust the optional delay parameter by replacing <milliseconds> with the number of milliseconds you want to simulate between responses in the stream.
-            URI.create("https://installer.accurx.com/chain/4.22.50587.0/accuRx.Installer.Local.msi"),
-            Path.of("myfirstdownload.msi")
+        // Replace the URL below with https://web.dev.accurx.com/api/desktop/download/unreliable?delay=<milliseconds> to test against the unreliable server. You can adjust the optional delay parameter by replacing <milliseconds> with the number of milliseconds you want to simulate between responses in the stream.
+        //URI.create("https://installer.accurx.com/chain/4.22.50587.0/accuRx.Installer.Local.msi"),
+        URI.create("https://www.besztercekk.hu/sfp/hatarozat_2009_2020.pdf"),
+        Path.of("hatarozat_2009_2020.pdf")
     );
 
     public static void main(String[] args) throws Exception {
 
         FileDownloadCommand fileDownloadCommand = new FileDownloadCommand(
-                new FileDownloaderImpl(
-                        HttpClient.newBuilder()
-                ),
-                downloadSettings
+            new FileDownloaderImpl(
+                HttpClient.newBuilder()
+            ),
+            downloadSettings
         );
         fileDownloadCommand.run();
     }
